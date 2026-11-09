@@ -86,9 +86,11 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <MediaSwitch current={media} compact className="hidden md:inline-flex" />
+        <div className="hidden lg:block">
+          <MediaSwitch current={media} compact />
+        </div>
 
-        <nav className="hidden h-full items-center gap-4 md:flex lg:gap-5">
+        <nav className="hidden h-full items-center gap-4 lg:flex lg:gap-5">
           {links.map((link) => {
             const active =
               pathname === link.match || pathname.startsWith(`${link.match}/`);
@@ -128,7 +130,9 @@ export function SiteHeader() {
             />
           </form>
 
-          <LocaleSwitcher compact className="hidden sm:inline-flex" />
+          <div className="hidden sm:block">
+            <LocaleSwitcher compact />
+          </div>
 
           <Link
             href="/admin"
@@ -145,7 +149,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
-            className="flex size-9 items-center justify-center rounded-full text-muted hover:bg-white/[0.04] hover:text-cream md:hidden"
+            className="flex size-9 items-center justify-center rounded-full text-muted hover:bg-white/[0.04] hover:text-cream lg:hidden"
             aria-label={t(
               open ? "Menü schließen" : "Menü öffnen",
               open ? "Close menu" : "Open menu",
@@ -158,7 +162,7 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div className="border-t border-line-soft bg-bg/95 md:hidden">
+        <div className="border-t border-line-soft bg-bg/95 lg:hidden">
           <div className="container-page flex flex-col gap-1 py-4">
             <MediaSwitch current={media} className="mb-2 self-start" />
             <form

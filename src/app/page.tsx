@@ -312,7 +312,7 @@ export default async function HomePage() {
 
       <section className="container-page py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
-          <div>
+          <div className="min-w-0">
             <SectionHeading
               eyebrow={t("Das Ranking", "The ranking")}
               title={t("Die zehn Besten", "The top ten")}
@@ -335,7 +335,7 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <aside className="space-y-5">
+          <aside className="min-w-0 space-y-5">
             <div className="surface-card p-5">
               <div className="flex items-center gap-2 text-gold">
                 <BarChart3 className="size-4" />

@@ -622,11 +622,11 @@ export function EpisodesPanel({
                           <div className="min-w-0 flex-1">
                             <p
                               className={cn(
-                                "truncate text-[13px]",
+                                "line-clamp-2 text-[13px] sm:line-clamp-none sm:truncate",
                                 episode.watched ? "text-cream" : "text-cream/85",
                               )}
                             >
-                              <span className="mr-2 font-mono text-[10px] text-muted-2">
+                              <span className="mr-2 whitespace-nowrap font-mono text-[10px] text-muted-2">
                                 {episodeCode(episode)}
                               </span>
                               {label}
@@ -646,7 +646,7 @@ export function EpisodesPanel({
                           </div>
 
                           {next?.id === episode.id ? (
-                            <span className="shrink-0 rounded-full border border-gold/30 bg-gold/10 px-2 py-0.5 text-[9px] uppercase tracking-[0.12em] text-gold">
+                            <span className="hidden shrink-0 rounded-full border border-gold/30 bg-gold/10 px-2 py-0.5 text-[9px] uppercase tracking-[0.12em] text-gold sm:inline">
                               {t("Als Nächstes", "Up next")}
                             </span>
                           ) : null}

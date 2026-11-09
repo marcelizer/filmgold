@@ -129,7 +129,7 @@ export default async function AdminPage({
         </div>
       </div>
 
-      <nav className="no-scrollbar mt-8 flex gap-1 overflow-x-auto border-b border-line-soft">
+      <nav className="mt-8 flex flex-wrap gap-1 border-b border-line-soft">
         {TABS.map((entry) => {
           const active = entry.key === tab;
           return (

@@ -113,7 +113,7 @@ export function ListControls({
         </select>
       </label>
 
-      <label className="inline-flex items-center gap-1.5">
+      <label className="inline-flex shrink-0 items-center gap-1.5">
         <span className="whitespace-nowrap">{t("Eigene", "Custom")}</span>
         <input
           type="number"
@@ -131,7 +131,7 @@ export function ListControls({
             if (custom.trim()) applyCustom();
           }}
           placeholder={t("z. B. 50", "e.g. 50")}
-          className="h-8 w-16 [appearance:textfield] rounded-full border border-line bg-surface-2/70 px-2.5 text-[11px] text-cream placeholder:text-muted-2/60 focus:border-gold/50 focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+          className="h-8 w-20 shrink-0 [appearance:textfield] rounded-full border border-line bg-surface-2/70 px-2.5 text-[11px] text-cream placeholder:text-muted-2/60 focus:border-gold/50 focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
           aria-label={t("Eigene Anzahl pro Seite", "Custom items per page")}
         />
         <button
